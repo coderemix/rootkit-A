@@ -3,3 +3,7 @@ KDIR	:=	/lib/modules/$(shell uname -r)/build
 PWD	:=	$(shell pwd)
 default:
 	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
+all:
+	$(MAKE) -C $(KDIR) modules
+clean:
+	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) clean

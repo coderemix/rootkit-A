@@ -17,11 +17,13 @@ static int alkm_init(void)
     //指定消息优先级，输出到内核控制台/dmesg查看
     printk(KERN_ALERT "alkm: module loaded.\n");
 
-    printk(KERN_ALERT "alkm: hide from lsmod & /proc/modules.\n");
-    list_del_init(&__this_module.list);
+    //hide OFF
+    //printk(KERN_ALERT "alkm: hide from lsmod & /proc/modules.\n");
+    //list_del_init(&__this_module.list);
 
-    printk("alkm: hide from /sys/module/.\n")
-    kobject_del(&THIS_MODULE->mkobj.kobj);
+    //hide OFF
+    //printk(KERN_INFO "hide from /sys/module/ folder\n");
+    //kobject_del(&THIS_MODULE->mkobj.kobj);
 
     return 0;
 }
